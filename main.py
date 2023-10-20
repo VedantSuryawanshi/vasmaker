@@ -20,6 +20,14 @@ new_fuel_cost_per_type = {
 new_mileage = 12
 new_fuel_cost_per_liter = 105
 
+# Define the function to extract the first name
+def extract_first_name(full_name):
+    parts = full_name.split()
+    if len(parts) > 0:
+        return parts[0]
+    else:
+        return full_name
+
 # Load CSV data into a DataFrame
 df = pd.read_csv(new_csv_file, usecols=new_selected_columns)
 print(df.columns)
@@ -79,12 +87,15 @@ for index, row in df.iterrows():
         data['Link'] = 'https://cars.mekit.in/bookatgarageform'
 
 
+
     # Calculate the monthly fuel cost based on "FUEL"
     fuel_avg_run_per_month = data['FUEL']
     if pd.isna(fuel_avg_run_per_month):
             fuel_avg_run_per_month = 500  # Set a default value of 500
 
     monthly_fuel_cost = (fuel_avg_run_per_month / new_mileage) * new_fuel_cost_per_liter
+    
+    
 
     # Set a default value of 500 if it's less than or equal to 0
     if fuel_avg_run_per_month <= 0:
@@ -96,16 +107,22 @@ for index, row in df.iterrows():
 
     # Add the calculated monthly fuel cost to the data dictionary
     data['MAK'] = monthly_fuel_cost
-
-    # Get the "Fuel Type" from the data
+    
+        # Get the "Fuel Type" from the data
     fuel_type = data.get('FUEL', 'Petrol')  # Default to Petrol if Fuel Type is missing
+
+    # Calculate the monthly fuel cost based on "FUEL"
+    fuel_avg_run_per_month = data['FUEL']
+    if pd.isna(fuel_avg_run_per_month):
+        fuel_avg_run_per_month = 500  # Set a default value of 500
+
+    # Calculate the monthly PUC renewal cost based on the "Fuel Type"
     puc_renewal_cost = new_fuel_cost_per_type.get(fuel_type, 125)  # Default to 125 for unknown fuel types
-    
-    
 
     # Add the PUC renewal cost and "Fuel Type" to the data dictionary
     data['PUC Renewal Cost'] = puc_renewal_cost
-    data['Fuel Type'] = fuel_type  # Add or overwrite the value
+    data['Fuel Type'] = fuel_type
+
 
     # Replace missing "FULL NAME" with "Sir"
     if pd.isna(data['FULL NAME']) or data['FULL NAME'] == '':
@@ -114,6 +131,22 @@ for index, row in df.iterrows():
     # Calculate the fuel cost for 4 months
     fuel_cost_for_4_months = monthly_fuel_cost * 4
     data['Fuel Cost for 4 Months'] = fuel_cost_for_4_months
+
+    # Loop through each row in the DataFrame
+for index, row in df.iterrows():
+    # Extract the first name from the 'FULL NAME' column
+    data = row.to_dict()
+    full_name = data['FULL NAME']
+    first_name = extract_first_name(full_name)
+
+    # Now, you can use 'first_name' in your code as needed
+
+    # Example: Assign 'first_name' to a 'First Name' field in 'new_data'
+    data['First Name'] = first_name
+
+    # Add 'First Name' as a new column in your DataFrame
+    df['First Name'] = df['FULL NAME'].apply(extract_first_name)
+
 
     # Generate manifest JSON file based on the custom template
     manifest_data = json_template_data.copy()
