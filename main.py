@@ -95,20 +95,18 @@ for index, row in df.iterrows():
 
     monthly_fuel_cost = (fuel_avg_run_per_month / new_mileage) * new_fuel_cost_per_liter
     
-    
-
     # Set a default value of 500 if it's less than or equal to 0
     if fuel_avg_run_per_month <= 0:
         fuel_avg_run_per_month = 500
 
     # Get the current date in the format "DD/MM/YYYY"
-    current_date = datetime.now().strftime("%d/%m/%Y")
+    current_date = datetime.now().strftime("%d/%m/%Y") 
     data['Last Update'] = current_date
 
     # Add the calculated monthly fuel cost to the data dictionary
     data['MAK'] = monthly_fuel_cost
     
-        # Get the "Fuel Type" from the data
+    # Get the "Fuel Type" from the data
     fuel_type = data.get('FUEL', 'Petrol')  # Default to Petrol if Fuel Type is missing
 
     # Calculate the monthly fuel cost based on "FUEL"
@@ -122,7 +120,9 @@ for index, row in df.iterrows():
     # Add the PUC renewal cost and "Fuel Type" to the data dictionary
     data['PUC Renewal Cost'] = puc_renewal_cost
     data['Fuel Type'] = fuel_type
-
+    
+    print("Fuel Type:", fuel_type)
+    print("PUC Renewal Cost:", puc_renewal_cost)
 
     # Replace missing "FULL NAME" with "Sir"
     if pd.isna(data['FULL NAME']) or data['FULL NAME'] == '':
@@ -133,11 +133,11 @@ for index, row in df.iterrows():
     data['Fuel Cost for 4 Months'] = fuel_cost_for_4_months
 
     # Loop through each row in the DataFrame
-for index, row in df.iterrows():
+    for index, row in df.iterrows():
     # Extract the first name from the 'FULL NAME' column
-    data = row.to_dict()
-    full_name = data['FULL NAME']
-    first_name = extract_first_name(full_name)
+     data = row.to_dict()
+     full_name = data['FULL NAME']
+     first_name = extract_first_name(full_name)
 
     # Now, you can use 'first_name' in your code as needed
 
@@ -146,8 +146,6 @@ for index, row in df.iterrows():
 
     # Add 'First Name' as a new column in your DataFrame
     df['First Name'] = df['FULL NAME'].apply(extract_first_name)
-
-
     # Generate manifest JSON file based on the custom template
     manifest_data = json_template_data.copy()
     manifest_data['start_url'] = f'/{index}'  # Replace the placeholder with the appropriate value
@@ -161,6 +159,9 @@ for index, row in df.iterrows():
     # Add manifest file number to the data dictionary
     data['Manifest_File_Number'] = index
 
+    # Add a link to the 'Manifest_Link' in the data dictionary
+    data['Manifest_Link'] = f'{index}.json'
+
     # Render the HTML using the template and data
     html_output = new_template.render(data=data)
 
@@ -168,7 +169,6 @@ for index, row in df.iterrows():
     output_file_name = f'{new_output_dir}/{index}.html'
     with open(output_file_name, 'w') as output_file:
         output_file.write(html_output)
-
     print(f"HTML file {output_file_name} and manifest JSON file {json_file_name} generated successfully!")
 
 print("All HTML and JSON files generated successfully!")
