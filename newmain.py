@@ -30,6 +30,9 @@ with open(new_json_template_file, 'r') as json_template:
 # Create a directory to store individual HTML files (if it doesn't exist)
 os.makedirs(new_output_dir, exist_ok=True)
 
+# Start the count from 5000
+count = 5000
+
 # Loop through each row in the DataFrame
 for index, row in df.iterrows():
     # Prepare data for the template (one row at a time)
@@ -42,30 +45,30 @@ for index, row in df.iterrows():
     # Assign 'first_name' to a 'First Name' field in 'data'
     data['First Name'] = first_name
 
-    # Add 'First Name' as a new column in your DataFrame
-    df.loc[index, 'First Name'] = first_name
+    # Increment the count for each file
+    count += 1
 
     # Generate manifest JSON file based on the custom template
     manifest_data = json_template_data.copy()
-    manifest_data['start_url'] = f'/{index}'  # Replace the placeholder with the appropriate value
+    manifest_data['start_url'] = f'/{count}'  # Use the incremented count
 
     # Generate JSON file with the data
     json_output = json.dumps(manifest_data, indent=4)
-    json_file_name = f'{new_output_dir}/{index}.json'
+    json_file_name = f'{new_output_dir}/{count}.json'
     with open(json_file_name, 'w') as json_file:
         json_file.write(json_output)
 
     # Add manifest file number to the data dictionary
-    data['Manifest_File_Number'] = index
+    data['Manifest_File_Number'] = count
 
     # Add a link to the 'Manifest_Link' in the data dictionary
-    data['Manifest_Link'] = f'{index}.json'
+    data['Manifest_Link'] = f'{count}.json'
 
     # Render the HTML using the template and data
     html_output = new_template.render(data=data)
 
     # Save the generated HTML to a file (one file per row)
-    output_file_name = f'{new_output_dir}/{index}.html'
+    output_file_name = f'{new_output_dir}/{count}.html'
     with open(output_file_name, 'w') as output_file:
         output_file.write(html_output)
     print(f"HTML file {output_file_name} and manifest JSON file {json_file_name} generated successfully!")
