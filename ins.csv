@@ -1,12 +1,11 @@
-VAS ,NAME,Mobile number,Email ,Address ,MODEL,Reg No,Avg run/month,Last service ,Workshop,Fuel type,Tyre Manufact.,Next service,Expiry,PUC,Tyre,VAS link,Sticked,Activated,Onboarding,App install ,Insu,PUC,RC,Last Interaction,Latest odometer,Date of odometer,Customer Note,Whatsapp group ,Onboarding status 
-1215,Rahul Ahuja,9028668406,,"402, Garnet,Tharwani Solitaire, Kalyan-Murbad Road, Kalyan - 421103.",Hyundai Verna ,MH06BE2352,300,01/01/2023,NONE,Diesel,,1 Jan 2024,21 Feb 2024,5 Jun 2024,,,,,,,,,,,,,,,
-101,Gurpreet Singh,8369838756,,"Sai Tukaram Building, in front of gurudwara Rambaug",Nissan Micra XE BS IV,MH04FF0732,500,30/03/2023,Mannu Auto,Diesel,,30 Mar 2024,1 Feb 2024,26 Feb 2024,,,,,,,,,,,,,,,
-1314,Rajesh M Chavan,9819387797,,"05, Manisha, Rambaug Lane No. - 06, Behind Dr. Mhaskar hospital, Murbad Road Kalyan -W. Thane - 421 301",i20 Sportz,MH05AS9029,300,12/03/2023,Mannu Auto,Petrol,114,12 Mar 2024,14 Feb 2024,9 Dec 2023,13 Mar 18,,,,,,,,,,,,,,
-,Tanmay Shinde,9082485597,,"Ganesh Row House,Rno. 22/23, Annapurna Nagar, Adharwadi Chowk, Kalyan West 421301",Creta,MH05DS9464,500,01/01/2023,Modi Hyundai,Diesel,,1 Jan 2024,12 Feb 2024,9 Dec 2023,,,,,,,,,,,,,,,
-,Prathamesh Khairnar,77388 14303,,"C3 building,Godrej park, near KD residency hotel, Kalyan West. 421301",Skoda Fabia,MH21V3474,1000,23/02/2023,Wash and More,Diesel,,23 Dec 2023,23 Feb 2024,4 Jan 2024,,,,,,,,,,,,,,,
-1329,Yogesh Palshetkar,9820072650,palshetkar@rediffmail.com,"601, Cyprus, tycoon’s residency behind spring time club khadakpada",Hyundai Creta,MH05CV8918,"1,500",08/06/2023,Express Autocare,,,8 Jan 2024,17 Feb 2024,25 Jan 2024,,,,,,,,,,,,,,,
-,Dyanesh Shelke,99874 86329,,Navi Mumbai,Wagon R,MH43BU9079,1500,01/08/2022,Aher Auto,CNG,,1 Mar 2023,10 Feb 2024,5 Apr 2024,,,,,,,,,,,,,,,
-,Rohan Naik,7829217003,,21 C-1 Godrej Hill,Suzuki Ciaz,KA30M7296,2000,April 2023,Aher Auto,,,1 Sep 2023,4 Feb 2024,NA,,,,,,,,,,,,,,,
-,Sneha Pandey,8080071096,dollypandey1892@gmail.com,"Regency estate, dombivli east, thane",i20,MH05EP1008,1000,February 2023,Modi Hyundai,,,1 Dec 2023,1 Feb 2024,NA,,,,,,,,,,,,,,,
-88,Ganesh Avhad,7208769374,,,Corolla,Mh12FY9289,,,,,,,19 Feb 2024,5 Jun 2024,,,,,,,,,,,,,,,
-1114,Manish Gurdasani,9970465759,manishgurdasani@yahoo.com,"A2, Mohan Pride, Wayale Nagar, Kalyan west - 421301",Swift,Mh05cm0675,500,May 2023,Chiman Automobiles Shanti Nagar ,,,1 May 2024,16 Feb 2024,18 Dec 2023,,,,,,,,,,,,,,,
+NAME,Mobile number,Email ,Address ,MODEL,Reg No,Avg run/month,Last service ,workshop,Fuel type,Tyre Manufact.,Expiry,,,,,,,,,,,,,,,,
+Deepak Boria,7666776266,,"C5,23,Volga,Godrej hill. Khadakpada. Kalyan",Tata Tigor XTA ,MH43BN6761,500,01/08/2023,Express Autocare,,,2 Jun 2024,,,,,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,Follow-up,,,,,Added
+Anuj Tripathi,7021642357,,"C2 building, flat number 14. Godrej park, near KD residency hotel, Kalyan West. 421301",Volkswagen Polo Tsi ,MH05EQ4272,500,01/08/2022,Mody VW,,,29 Jun 2024,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Follow-up,,,,,Added
+Tanmay Rao,9892802488,,Raunakcity kalyan west db chowk,Civic 1.8,MH43V0652,500,January 2023,Royal Garage,Petrol,,9 Jun 2024,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Follow-up,,,,,Added
+Jayesh Sharma,9168686966,inboxjayeshsharma@gmail.com,421301,Corolla,MH12DY6737,500,01/12/2022,No Preference,Petrol,,7 Jun 2024,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Follow-up,,,,,
+Rajas  Deshpande,9321740919,,"804, Om Tanishq Residency, Ahead to MLA bunglow, Opposite Vighnaharta Banglow, Aatmaram chowk, kalyan west.",Celerio,MH05EA2142,500,01/07/2023,Aher Auto,,,1 Jun 2024,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Follow-up,,,,,Added
+Tarun Kukreja,97666 62134,,Ulhasnagar Hitesh Wadhwani,Suzuki Swift,MH05EA2227,1000,25/03/2023,Aher Auto,Diesel,,10 Jun 2024,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Follow-up,,,,,Added
+Vishnu Kumavat,98227 99933,,"502, Niraj City C1",Tata Tiago,MH05FB8757,1000,31/07/2023,Sudarshan Tata,CNG,,1 Jun 2024,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Follow-up,,,,,Added
+Gurprit Hira,7798175513,gurprithira@gmail.com,"Mohan altezza, near vasant valley, wayale nagar, Khadakpada",Innova,Mh04DJ9651,800,Jan 2022,No Preference,,,9 Jun 2024,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Follow-up,30000,,,,
+Salmaan Sharief,9619987132,salmaansharief786@gmail.com,"C-11/19,4th floor, Tigris CHS, Godrej hill, 421301",Swift,MH05EJ0508,500,January 2023,Express Autocare,,,10 Jun 2024,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Follow-up,,,,,
+Sudhir Chandra Dwivedi ,919867628251,sudhirchandra11@gmail.com,"603, ashapura prem tower, near roshan petrol pump, Kalyan west ",Baleno,MH05EQ2653,100,February 2024,Aher Maruti Suzuki ,Petrol,,10 Jun 2024,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Follow-up,7500,05/11/23,,,

@@ -16,7 +16,7 @@ with open(new_json_template_file, 'r') as json_template:
     json_template_data = json.load(json_template)
 
 # Loop through each number from 1200 to 1400
-for index in range(1200, 1401):
+for index in range(1502, 2000):
     # Add manifest file number to the data dictionary
     data = {}
     data['Manifest_File_Number'] = index
